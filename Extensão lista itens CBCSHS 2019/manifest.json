@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Extrator de Links CBCSHS 2019",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://proceedings.science/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [ "links_trabalhos_CBCSHS_2019.json" ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
